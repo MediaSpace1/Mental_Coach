@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is the important line -->
+    <title>Mental Chatbot Coach</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif; /* Optional: For a nicer font than the default */
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        background-color: #ffffff;
+    }
+
+    p {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <!-- Your message to users -->
+    <p>Bienvenue Au Coach Mental</p>
+
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+ 
+<script>
+    window.botpressWebChat.init({
+        // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
+        "botId": "44314abd-0d2c-4e27-a34e-2ff93926ebcd",
+        "clientId": "44314abd-0d2c-4e27-a34e-2ff93926ebcd",
+ 
+        // Set the URL for the Botpress WebChat JavaScript file and the messaging server
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+        "messagingUrl": "https://messaging.botpress.cloud",
+ 
+        // Set the name of the bot that will be displayed in the WebChat interface
+        "botName": "L'Horizon",
+ 
+        // Set the width of the WebChat container and layout to 100% (Full Screen)
+        "containerWidth": "100%25",
+        "layoutWidth": "100%25",
+ 
+        // Hide the widget and disable animations
+        "hideWidget": true,
+        "disableAnimations": false,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "showCloseButton": false,
+        "enableConversationDeletion": false,
+        "enableTranscriptDownload": false,
+        "showConversationsButton": false,
+    });
+ 
+    // Opens up the Chatbot by default
+    // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+    window.botpressWebChat.onEvent(
+        function () {
+            window.botpressWebChat.sendEvent({ type: "show" });
+        },
+        ["LIFECYCLE.LOADED"]
+    );
+</script>
+ 
+   
+</body>
+</html>
