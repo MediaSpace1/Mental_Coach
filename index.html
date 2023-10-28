@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is the important line -->
-    <title>Mental Coach</title>
+    <title>AI Coach Mental</title>
     <style>
     body {
         font-family: Arial, sans-serif; /* Optional: For a nicer font than the default */
@@ -22,14 +22,14 @@
 </head>
 <body>
     <!-- Your message to users -->
-    <p>Bienvenue Au Coach Mental Generale</p>
+    <p>Bienvenue Au Coach Mental</p>
 
 <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
  
 <script>
     window.botpressWebChat.init({
         // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
-        //"botId": "44314abd-0d2c-4e27-a34e-2ff93926ebcd",
+        //"botId": "ea09c910-d2ad-49a7-8763-03330e498ef1",
         "botId": "0e612049-068e-401c-8fac-6f1ed0827168",
         "clientId": "0e612049-068e-401c-8fac-6f1ed0827168",
  
@@ -46,7 +46,13 @@
  
         // Hide the widget and disable animations
         "hideWidget": true,
-        "disableAnimations": true,
+        "disableAnimations": false,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "showCloseButton": false,
+        "enableConversationDeletion": false,
+        "enableTranscriptDownload": false,
+        "showConversationsButton": false,
     });
  
     // Opens up the Chatbot by default
@@ -58,6 +64,7 @@
         ["LIFECYCLE.LOADED"]
     );
 </script>
+ 
    
 </body>
 </html>
